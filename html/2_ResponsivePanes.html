@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Improved Responsive Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: space-between;
+        font-family: Arial, sans-serif;
+      }
+      nav {
+        background-color: #333;
+        padding: 10px;
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+      }
+      li {
+        position: relative;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+      }
+      a:hover {
+        color: #f633bf;
+      }
+      .dropdown-elements {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        z-index: 10;
+      }
+      .dropdown-elements a {
+        color: black;
+        padding: 10px;
+        display: block;
+      }
+      .dropdown-elements a:hover {
+        background-color: #0b6641;
+        color: white;
+      }
+      .dropdown:hover .dropdown-elements {
+        display: block;
+      }
+      .container {
+        display: flex;
+        flex: 1;
+      }
+      .sidearea {
+        width: 250px;
+        background: #e451f7;
+        padding: 1rem;
+        color: white;
+      }
+      .main {
+        flex: 1;
+        background: #f75188;
+        padding: 1rem;
+        color: white;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidearea {
+          width: 100%;
+        }
+        ul {
+          flex-direction: column;
+          text-align: center;
+        }
+        li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li class="dropdown">
+          <a href="#contact">Contact</a>
+          <div class="dropdown-elements">
+            <a href="#">Email</a>
+            <a href="#">Call</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <aside class="sidearea">
+        <h2>Sidebar</h2>
+        <p>Created a Responsive Layout</p>
+      </aside>
+      <main class="main">
+        <h2>Main Content</h2>
+        <p>Check out this responsive layout!</p>
+      </main>
+    </div>
+    <footer>&copy; 2025 Sunit Mittal | All rights reserved</footer>
+  </body>
+</html>

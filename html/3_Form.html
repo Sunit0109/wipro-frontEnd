@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .contact-form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 90%;
+        padding: 7.5px;
+        margin: 7.5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      .contact-form button {
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <form class="contact-form">
+      <h2>User Details</h2>
+      <label for="userName">Name:</label>
+      <input type="text" id="userName" placeholder="Your Name" required />
+      <br />
+      <label for="email">Email Id:</label>
+      <input type="email" id="email" placeholder="Your Email" required />
+      <br />
+      <label for="contact">Contact No:</label>
+      <input type="tel" id="contact" placeholder="Your password" required />
+      <br />
+      <label for="security">Security Question:</label>
+      <textarea
+        id="security"
+        placeholder="Your Question"
+        rows="2"
+        required
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
